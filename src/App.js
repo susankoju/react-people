@@ -1,35 +1,19 @@
-import React from "react"
+import React from 'react';
 
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
-import Footer from "./components/Footer"
+import {Header} from './components/Header';
+import MainContain from './components/MainContain';
+import {Footer} from './components/Footer';
+import './App.css';
 
-class App extends React.Component{
+function App() {
+  return (
+    <div className="App">
+          <Header />
+            <MainContain />
+          <Footer />
+    </div>
 
-  constructor(){
-    super()
-    this.state= {
-      page:"home"
-    }
-  }
-
-  render(){
-    
-    return (
-      <div>
-        <Header heading="ToDo List Checker" setPage={this.setPage} page={this.state.page}/>
-        <MainContent page={this.state.page.toLowerCase()}/>
-        <Footer />
-      </div>
-    )
-  }
-
-  setPage = (pageTo) => {
-    this.setState({
-      page: pageTo
-    });
-  }
+  );
 }
 
-
-export default App
+export default App;

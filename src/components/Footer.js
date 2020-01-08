@@ -1,18 +1,7 @@
-import React from "react"
+import React from 'react'
 
-class Footer extends React.Component{
-
-
-    render(){
-        return (
-            <footer>
-                <p>
-                    2020, lfTech
-                </p>
-            </footer>
-        )
-    }
+export const Footer = () => {
+    return <footer>
+        2020, lfTech
+    </footer>
 }
-
-
-export default Footer
